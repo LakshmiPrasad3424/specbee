@@ -1,0 +1,20 @@
+button,.btn {
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    font-family: $fontfamily;
+    background: 0;
+    border: 0;
+    font-size: 16px;
+    @include border-radius(3px);
+    transition: all 0.2s;
+    color: #fff;
+}
+
+.dark-btn {
+    background: $dark;
+}
+
+.red-btn {
+    background: $red;
+}

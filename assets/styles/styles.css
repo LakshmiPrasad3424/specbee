@@ -1,0 +1,122 @@
+/*
+	New templates Sass Theme
+	Author: Lakshmi Prasad
+	version: 0.1
+*/
+/* BASE */
+/* Font family */
+/* colors */
+/* Font size */
+/* mixins */
+/*@include border-radius(10px);*/
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Poppins", sans-serif;
+}
+
+*:focus {
+  outline: none;
+}
+
+body {
+  font-size: 18px;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+  font-size: 14px;
+  color: #0A1118;
+  text-transform: uppercase;
+}
+
+a:focus,
+a,
+a:hover,
+button {
+  outline: none;
+}
+
+a:focus {
+  text-decoration: none;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+p {
+  font-size: 14px;
+  color: #F4F4F4;
+  line-height: 24px;
+  margin: 0 0 20px 0px;
+  letter-spacing: 0.4px;
+}
+
+input {
+  font-family: "Poppins", sans-serif;
+  outline: 0;
+}
+
+input[type="submit"] {
+  cursor: pointer;
+}
+
+.container {
+  width: 100%;
+  padding: 0 60px;
+}
+
+@media only screen and (max-width: 1280px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .container {
+    padding: 0 10px;
+  }
+}
+
+/* modules */
+button, .btn {
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+  background: 0;
+  border: 0;
+  font-size: 16px;
+  border-radius: 3px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  color: #fff;
+}
+
+.dark-btn {
+  background: #0A1118;
+}
+
+.red-btn {
+  background: #C8122E;
+}
+
+/* layouts */
+/*# sourceMappingURL=styles.css.map */
