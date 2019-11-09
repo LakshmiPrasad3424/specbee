@@ -43,6 +43,7 @@
             text-align: initial;
             max-width: 500px;
 
+
             h2 {
                 line-height: 48px;
                 margin-bottom: 30px;
@@ -57,7 +58,7 @@
 
 .rewards-sec {
     background: $light;
-    padding: 114px 0;
+    padding: 114px 0 100px;
 
     .rewards-main {
         display: grid;
@@ -66,17 +67,45 @@
         .card {
             width: calc(100% - 90px);
             background: $whitebg;
-            padding: 25px;
-            margin-bottom: 30px;
+            padding: 17px 35px 20px;
+            margin-bottom: 33px;
 
-            p{
+            &.card2 {
+                background: $orange;
+
+                h4 {
+                    color: $whitebg;
+                }
+
+                p {
+                    color: $whitebg;
+                }
+            }
+
+            h4 {
+                margin-bottom: 5px;
+                font-size: 16px;
+                letter-spacing: 1px;
+            }
+
+            p {
                 margin: 0;
+                line-height: 17px;
+                font-size: 12px;
             }
         }
 
         .content-sec {
             text-align: initial;
             max-width: 500px;
+            padding: 57px 0;
+
+            h2 {
+                color: $dark;
+                margin-bottom: 24px;
+                line-height: 48px;
+                font-weight: 500;
+            }
         }
     }
 }
@@ -126,7 +155,163 @@
         .img-sec {
             img {
                 display: block;
+                max-width: 100%;
             }
         }
     }
+}
+
+
+@media only screen and(max-width:$tabl) {
+    .banner {
+        .content {
+            .inner-content {
+                h1 {
+                    line-height: 62px;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+
+    .about-us {
+        .about-inner {
+            .content-sec {
+                h2 {
+                    line-height: 42px;
+                    margin-bottom: 24px;
+                }
+            }
+        }
+    }
+
+    .rewards-sec {
+        padding: 100px 0 67px;
+
+        .rewards-main {
+            .content-sec {
+                h2 {
+                    line-height: 42px;
+                    margin-bottom: 24px;
+                }
+            }
+        }
+    }
+
+    .dummy-content-sec {
+        .dummy-content-main {
+            .content {
+                padding: 40px 40px 20px;
+
+                h2 {
+                    margin-bottom: 40px;
+                    line-height: 42px;
+                    font-weight: 400;
+                }
+
+                ul {
+                    li {
+                        margin-bottom: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and(max-width:$tabp) {
+
+    .banner .content {
+        max-width: 70%;
+        padding: 100px 0;
+    }
+
+    .about-us {
+        padding: 80px 0;
+
+        .about-inner {
+            display: block;
+
+            .img-sec {
+                width: 100%;
+                margin-bottom: 40px;
+
+                img {
+                    max-width: 100%;
+                }
+            }
+
+            .content-sec {
+                max-width: 100%;
+
+                p {
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+
+    .rewards-sec {
+
+        padding: 80px 0 22px;
+
+        .rewards-main {
+            display: block;
+
+            .card {
+                width: 100%;
+            }
+
+            .content-sec {
+                padding: 30px 0;
+                max-width: 100%;
+            }
+        }
+    }
+
+    .dummy-content-sec {
+        .dummy-content-main {
+            display: block;
+
+            .content {
+                padding: 71px 20px 40px;
+            }
+
+            .img-sec {
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and(max-width:$mobilel) {
+
+    .banner .content {
+        max-width: 80%;
+        padding: 80px 0 80px 10px;
+        background-position: 24px 0;
+
+        .inner-content {
+            width: 100%;
+
+            h1 {
+                line-height: 38px;
+            }
+        }
+
+    }
+
+    .dummy-content-sec .dummy-content-main .content {
+        padding: 40px 10px;
+
+        ul {
+            li {
+                padding-left: 25px;
+            }
+        }
+    }
+
 }

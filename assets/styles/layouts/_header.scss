@@ -140,7 +140,21 @@ header {
 
 @media only screen and (max-width:$tabp) {
     header {
-        height: 60px;
+        height: 80px;
+
+        +.banner {
+            margin-top: 80px;
+        }
+
+        &.scrolled {
+            height: 60px;
+
+            +section {
+                margin-top: 60px;
+            }
+        }
+
+
 
         .container {
             .main-header {
@@ -192,4 +206,13 @@ header {
             }
         }
     }
+}
+
+@media only screen and(max-width:$mobilel) {
+    header {
+        &.scrolled {
+            height: 60px;
+        }
+    }
+
 }

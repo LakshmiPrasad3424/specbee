@@ -96,9 +96,33 @@ input[type="submit"] {
   }
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 1024px) {
+  h1 {
+    font-size: 48px;
+  }
+  h2 {
+    font-size: 32px;
+  }
+}
+
+@media only screen and (max-width: 680px) {
   .container {
     padding: 0 10px;
+  }
+  h1 {
+    font-size: 40px;
+  }
+  h2 {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  h1 {
+    font-size: 36px;
+  }
+  h2 {
+    font-size: 28px;
   }
 }
 
@@ -309,7 +333,16 @@ header .container .main-header nav ul li a:hover {
 
 @media only screen and (max-width: 850px) {
   header {
+    height: 80px;
+  }
+  header + .banner {
+    margin-top: 80px;
+  }
+  header.scrolled {
     height: 60px;
+  }
+  header.scrolled + section {
+    margin-top: 60px;
   }
   header .container .main-header .menu-btn {
     display: block;
@@ -344,6 +377,12 @@ header .container .main-header nav ul li a:hover {
   }
   header .container .main-header.open nav ul {
     left: 0;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  header.scrolled {
+    height: 60px;
   }
 }
 
@@ -408,7 +447,7 @@ header .container .main-header nav ul li a:hover {
 
 .rewards-sec {
   background: #F4F4F4;
-  padding: 114px 0;
+  padding: 114px 0 100px;
 }
 
 .rewards-sec .rewards-main {
@@ -421,17 +460,45 @@ header .container .main-header nav ul li a:hover {
 .rewards-sec .rewards-main .card {
   width: calc(100% - 90px);
   background: #fff;
-  padding: 25px;
-  margin-bottom: 30px;
+  padding: 17px 35px 20px;
+  margin-bottom: 33px;
+}
+
+.rewards-sec .rewards-main .card.card2 {
+  background: #EDAB5E;
+}
+
+.rewards-sec .rewards-main .card.card2 h4 {
+  color: #fff;
+}
+
+.rewards-sec .rewards-main .card.card2 p {
+  color: #fff;
+}
+
+.rewards-sec .rewards-main .card h4 {
+  margin-bottom: 5px;
+  font-size: 16px;
+  letter-spacing: 1px;
 }
 
 .rewards-sec .rewards-main .card p {
   margin: 0;
+  line-height: 17px;
+  font-size: 12px;
 }
 
 .rewards-sec .rewards-main .content-sec {
   text-align: initial;
   max-width: 500px;
+  padding: 57px 0;
+}
+
+.rewards-sec .rewards-main .content-sec h2 {
+  color: #0A1118;
+  margin-bottom: 24px;
+  line-height: 48px;
+  font-weight: 500;
 }
 
 .dummy-content-sec {
@@ -480,6 +547,104 @@ header .container .main-header nav ul li a:hover {
 
 .dummy-content-sec .dummy-content-main .img-sec img {
   display: block;
+  max-width: 100%;
+}
+
+@media only screen and (max-width: 1024px) {
+  .banner .content .inner-content h1 {
+    line-height: 62px;
+    margin-bottom: 10px;
+  }
+  .about-us .about-inner .content-sec h2 {
+    line-height: 42px;
+    margin-bottom: 24px;
+  }
+  .rewards-sec {
+    padding: 100px 0 67px;
+  }
+  .rewards-sec .rewards-main .content-sec h2 {
+    line-height: 42px;
+    margin-bottom: 24px;
+  }
+  .dummy-content-sec .dummy-content-main .content {
+    padding: 40px 40px 20px;
+  }
+  .dummy-content-sec .dummy-content-main .content h2 {
+    margin-bottom: 40px;
+    line-height: 42px;
+    font-weight: 400;
+  }
+  .dummy-content-sec .dummy-content-main .content ul li {
+    margin-bottom: 30px;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .banner .content {
+    max-width: 70%;
+    padding: 100px 0;
+  }
+  .about-us {
+    padding: 80px 0;
+  }
+  .about-us .about-inner {
+    display: block;
+  }
+  .about-us .about-inner .img-sec {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  .about-us .about-inner .img-sec img {
+    max-width: 100%;
+  }
+  .about-us .about-inner .content-sec {
+    max-width: 100%;
+  }
+  .about-us .about-inner .content-sec p {
+    margin-bottom: 30px;
+  }
+  .rewards-sec {
+    padding: 80px 0 22px;
+  }
+  .rewards-sec .rewards-main {
+    display: block;
+  }
+  .rewards-sec .rewards-main .card {
+    width: 100%;
+  }
+  .rewards-sec .rewards-main .content-sec {
+    padding: 30px 0;
+    max-width: 100%;
+  }
+  .dummy-content-sec .dummy-content-main {
+    display: block;
+  }
+  .dummy-content-sec .dummy-content-main .content {
+    padding: 71px 20px 40px;
+  }
+  .dummy-content-sec .dummy-content-main .img-sec img {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .banner .content {
+    max-width: 80%;
+    padding: 80px 0 80px 10px;
+    background-position: 24px 0;
+  }
+  .banner .content .inner-content {
+    width: 100%;
+  }
+  .banner .content .inner-content h1 {
+    line-height: 38px;
+  }
+  .dummy-content-sec .dummy-content-main .content {
+    padding: 40px 10px;
+  }
+  .dummy-content-sec .dummy-content-main .content ul li {
+    padding-left: 25px;
+  }
 }
 
 footer {
@@ -570,5 +735,71 @@ footer .container .footer-main .social-icons span {
 footer .container .footer-main .social-icons a:not(:last-child) {
   display: inline-block;
   margin-right: 25px;
+}
+
+footer .container .footer-main .social-icons a img {
+  display: block;
+}
+
+@media only screen and (max-width: 850px) {
+  footer .container .footer-main span {
+    font-size: 13px;
+  }
+  footer .container .footer-main .footer-logo {
+    margin-right: 20px;
+  }
+  footer .container .footer-main .footer-nav {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  footer .container .footer-main .footer-nav ul li {
+    margin-right: 15px;
+    font-size: 13px;
+  }
+  footer .container .footer-main .social-icons span {
+    margin-right: 15px;
+  }
+  footer .container .footer-main .social-icons a:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  footer {
+    height: auto;
+    padding: 40px 0px;
+  }
+  footer .container .footer-main {
+    display: block;
+  }
+  footer .container .footer-main .footer-logo {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+  footer .container .footer-main .footer-nav {
+    width: 100%;
+  }
+  footer .container .footer-main .footer-nav ul {
+    display: block;
+  }
+  footer .container .footer-main .footer-nav ul li {
+    display: block;
+    text-align: left;
+    margin: 0;
+    padding: 10px 0;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #eee;
+  }
+  footer .container .footer-main .social-icons {
+    width: 100%;
+    padding-top: 20px;
+  }
+  footer .container .footer-main .social-icons span {
+    margin-right: auto;
+  }
+  footer .container .footer-main .social-icons a {
+    margin: 0 15px;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

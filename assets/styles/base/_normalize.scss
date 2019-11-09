@@ -86,8 +86,36 @@ input[type="submit"] {
   }
 }
 
+@media only screen and(max-width:$tabl) {
+  h1 {
+    font-size: 48px;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+}
+
 @media only screen and(max-width:$mobilel) {
   .container {
     padding: 0 10px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+}
+
+@media only screen and(max-width:$mobilep) {
+  h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 28px;
   }
 }
