@@ -1,0 +1,195 @@
+header {
+    height: 100px;
+    background: $whitebg;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: all .2s ease-in-out;
+    z-index: 1;
+
+    &.scrolled {
+        height: 80px;
+        @include box-shadow(0, 0, 4px, 1px, rgba(42, 42, 42, .3));
+    }
+
+    .container {
+        height: inherit;
+
+        .main-header {
+            height: inherit;
+            @include flexbox();
+            align-items: center;
+
+            .menu-btn {
+                width: 32px;
+                height: 40px;
+                margin-right: 15px;
+                position: relative;
+                -webkit-transform: rotate(0deg);
+                -moz-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+                transform: rotate(0deg);
+                -webkit-transition: .5s ease-in-out;
+                -moz-transition: .5s ease-in-out;
+                -o-transition: .5s ease-in-out;
+                transition: .5s ease-in-out;
+                cursor: pointer;
+                display: none;
+
+                span {
+                    display: block;
+                    position: absolute;
+                    height: 4px;
+                    width: 100%;
+                    background: $red;
+                    border-radius: 4px;
+                    opacity: 1;
+                    left: 0;
+                    -webkit-transform: rotate(0deg);
+                    -moz-transform: rotate(0deg);
+                    -o-transform: rotate(0deg);
+                    transform: rotate(0deg);
+                    -webkit-transition: .25s ease-in-out;
+                    -moz-transition: .25s ease-in-out;
+                    -o-transition: .25s ease-in-out;
+                    transition: .25s ease-in-out;
+
+                    &:first-child {
+                        top: 8px;
+                    }
+
+                    &:nth-child(2) {
+                        top: 18px;
+                    }
+
+                    &:last-child {
+                        top: 28px;
+                    }
+
+                }
+
+            }
+
+            &.open {
+                .menu-btn {
+                    span:first-child {
+                        top: 18px;
+                        -webkit-transform: rotate(135deg);
+                        -moz-transform: rotate(135deg);
+                        -o-transform: rotate(135deg);
+                        transform: rotate(135deg);
+                    }
+
+                    span:nth-child(2) {
+                        opacity: 0;
+                        left: -60px;
+                    }
+
+                    span:last-child {
+                        top: 18px;
+                        -webkit-transform: rotate(-135deg);
+                        -moz-transform: rotate(-135deg);
+                        -o-transform: rotate(-135deg);
+                        transform: rotate(-135deg);
+                    }
+                }
+            }
+
+            .logo {
+                width: 38px;
+                height: 44px;
+
+                a {
+                    display: block;
+                    height: inherit;
+                }
+            }
+
+            nav {
+                @include flexbox();
+                flex: 1;
+                justify-content: flex-end;
+
+                ul {
+                    height: inherit;
+                    @include flexbox();
+                    align-items: center;
+
+                    li {
+                        margin-right: 28px;
+
+                        a {
+                            transition: all .2s linear;
+
+                            &:hover {
+                                color: $red;
+                            }
+                        }
+                    }
+                }
+            }
+
+
+        }
+
+
+    }
+}
+
+
+
+@media only screen and (max-width:$tabp) {
+    header {
+        height: 60px;
+
+        .container {
+            .main-header {
+                .menu-btn {
+                    display: block;
+                }
+
+                nav {
+                    ul {
+                        display: block;
+                        position: fixed;
+                        left: -300px;
+                        top: 0;
+                        height: 100vh;
+                        background: rgba(42, 42, 42, .8);
+                        width: 250px;
+                        padding: 60px 20px;
+                        overflow: auto;
+                        z-index: 1;
+                        transition: all .3s linear;
+
+                        li {
+                            margin-right: 0;
+                            margin-bottom: 10px;
+                            padding: 10px;
+
+                            a {
+                                color: $whitebg;
+                            }
+                        }
+                    }
+                }
+
+                &.open {
+                    .menu-btn {
+                        z-index: 2;
+
+                        span {
+                            background: $whitebg;
+                        }
+                    }
+
+                    nav {
+                        ul {
+                            left: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,68 @@
+footer {
+    width: 100%;
+    height: 117px;
+    background: $whitebg;
+
+    .container {
+        height: inherit;
+
+        .footer-main {
+            @include flexbox();
+            height: inherit;
+            justify-content: space-between;
+            align-items: center;
+
+            span {
+                color: $para;
+                font-size: 15px;
+            }
+
+            .footer-logo {
+                @include flexbox();
+                align-items: center;
+                margin-right: 77px;
+
+                img {
+                    margin-right: 15px;
+                }
+            }
+
+            .footer-nav {
+                flex: 1;
+
+                ul {
+                    @include flexbox();
+                    align-items: center;
+                    justify-content: center;
+
+                    li {
+                        margin-right: 36px;
+
+                        a {
+                            color: $para;
+
+                            &:hover {
+                                color: $dark;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .social-icons {
+                @include flexbox();
+                align-items: center;
+
+                span {
+                    margin-right: 34px;
+                }
+
+                a:not(:last-child) {
+                    display: inline-block;
+                    margin-right: 25px;
+                }
+            }
+        }
+    }
+
+}

@@ -17,22 +17,29 @@ body {
 
 h1 {
   font-size: $h1;
+  line-height: 1;
 }
 
 h2 {
   font-size: $h2;
+  line-height: 1;
 }
 
 h3 {
   font-size: $body;
+  line-height: 1;
+}
+
+a {
+  font-size: 14px;
+  color: $dark;
+  white-space: nowrap;
+  text-transform: uppercase;
 }
 
 a,
 a:hover {
   text-decoration: none;
-  font-size: 14px;
-  color: $dark;
-  text-transform: uppercase;
 }
 
 a:focus,
@@ -53,9 +60,9 @@ li {
 
 p {
   font-size: 14px;
-  color: $light;
-  line-height: 24px;
-  margin: 0 0 20px 0px;
+  color: $para;
+  line-height: 26px;
+  margin: 0 0 30px;
   letter-spacing: 0.4px;
 }
 
@@ -73,13 +80,13 @@ input[type="submit"] {
   padding: 0 60px;
 }
 
-@media only screen and(max-width:1280px) {
+@media only screen and(max-width:$minilaptop) {
   .container {
     padding: 0 20px;
   }
 }
 
-@media only screen and(max-width:640px) {
+@media only screen and(max-width:$mobilel) {
   .container {
     padding: 0 10px;
   }
